@@ -1,0 +1,14 @@
+name: "Release Production - 2GP"
+description: "Upload a 2GP production package version"
+inputs:
+  dev-hub-auth-url:
+    type: string
+    required: True
+runs:
+  using: "composite"
+  steps:
+    - uses: cumulusci-actions/execute-cumulusci-flow@main
+      with:
+        dev-hub-auth-url: ${{ inputs.dev-hub-auth-url }}
+        org-name: release
+        flow-name: release_2gp_production
