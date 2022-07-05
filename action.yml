@@ -7,7 +7,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: cumulusci-actions/execute-cumulusci-flow@main
+      uses: cumulusci-actions/execute-flow-scratch@main
       with:
         dev-hub-auth-url: ${{ inputs.dev-hub-auth-url }}
         org-name: release
